@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 500px;
+    margin-top: 50px;
+    padding: 20px;
+    box-shadow: 10px 10px 5px gray;
+}
+.main_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.input_field input {
+    
+    /* width: 300px; */
+    margin: 5px;
+    width: 300px;
+    padding: 5px;
+}
+.inputName_field input{
+    margin: 2px;
+    padding: 5px;
+
+}
+.submit_btn{
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;margin-top: 10px;
+
+}
+.submit_btn button{
+    background: none;
+    padding: 7px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+
+}
+.header{
+    text-align: center;
+}
+.labelEle{
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+    font-size: small;
+}
+.rePasswordField{
+    font-size: small;
+    padding-top: 5px;
+}

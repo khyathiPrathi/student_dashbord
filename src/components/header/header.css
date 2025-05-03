@@ -1,0 +1,36 @@
+.header_bar{
+    background-color: black;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    /* padding: 15px; */
+
+}
+.nav{
+    display: flex;
+
+}
+
+
+.nav_links{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding-right: 15px;
+ 
+
+
+}
+.header_bar ul li{
+    list-style-type: none;
+    
+    padding: 15px;
+   
+
+}
+p{
+    padding: none;
+}
+.displayUserName{
+    font-size: 20px;
+}
