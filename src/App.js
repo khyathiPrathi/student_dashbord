@@ -21,7 +21,7 @@ function App() {
     <div >
 
       
-{/* <Provider store={appstore}> */}
+  {/* <Provider store={appstore}>   chenge to index.js  */}
 <BrowserRouter>
       <Header/>
       <Routes>
