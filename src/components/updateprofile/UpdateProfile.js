@@ -1,6 +1,6 @@
 import { useRef } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { updatedUser } from "../slice/userSlice"
+import { updatedUser } from "../../slice/userSlice"
 import { useNavigate } from "react-router-dom"
 
 

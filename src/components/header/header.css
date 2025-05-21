@@ -21,6 +21,10 @@
 
 
 }
+.nav_links.active{
+    color: blue;
+    
+}
 .header_bar ul li{
     list-style-type: none;
     

@@ -1,10 +1,12 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
 
 const UpdatePassword=()=>{
+    const navigate=useNavigate()
     const user=useSelector((store)=>store.user)
 
-    // const [err,setErr]=useState()
+    const [err,setErr]=useState()
     
     const currentPassword=useRef(null)
     const newPassword=useRef(null)
@@ -20,15 +22,30 @@ const UpdatePassword=()=>{
         updatePassword(newPasswordData)
     }
         const updatePassword=async(newPasswordData)=>{
-        const resp=await fetch("http://localhost:3000/api/updatePassword",{
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify(newPasswordData)
+            try{
+                const resp=await fetch("http://localhost:3000/api/updatePassword",{
+                    method:"POST",
+                    headers:{
+                        "Content-Type":"application/json"
+                    },
+                    body:JSON.stringify(newPasswordData)
+        
+                })
+                const data=await resp.json()
 
-        })
-        const data=await resp.json()
+                if(!resp.ok){
+                    throw new Error(data.message);
+                    
+                }else{
+                    alert("password updated sucessfully")
+                    navigate("/dashborad")
+                }
+
+            }catch(err){
+                setErr(err.message)
+
+            }
+        
         
 
 
@@ -56,7 +73,7 @@ const UpdatePassword=()=>{
          
 
             <div  className='submit_btn'><button onClick={handleupdate} >Update</button></div>
-            {/* {err&&<p style={{color:"red"}}>{err}</p>} */}
+            {err&&<p style={{color:"red"}}>{err}</p>}
 
          </div>
         </div>

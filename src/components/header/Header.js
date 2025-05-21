@@ -1,7 +1,7 @@
-import { Link, useNavigate } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import "./header.css"
 import { useDispatch, useSelector } from "react-redux"
-import { removeUser } from "../slice/userSlice"
+import { removeUser } from "../../slice/userSlice"
 
 
 const Header=()=>{
@@ -28,11 +28,11 @@ const Header=()=>{
                
                 <>
                 <li>
-                 <Link className="nav_links" to={'/login'}>Login</Link>
+                 <NavLink className="nav_links" to={'/login'}>Login</NavLink>
                     
                 </li>
                 <li>
-                <Link className="nav_links" to={'/signup'}>Register</Link>
+                <NavLink className="nav_links" to={'/signup'}>Register</NavLink>
                  
                 </li>
                 </>
@@ -45,11 +45,11 @@ const Header=()=>{
                     
                 </li>
                 <li>
-                <Link className="nav_links" to={'/updateprofile'}>Update Profile</Link>
+                <NavLink className="nav_links" to={'/updateprofile'}>Update Profile</NavLink>
                 </li>
                    
                 <li>
-                <Link className="nav_links" to={'/updatepassword'}>Update Password</Link>
+                <NavLink className="nav_links" to={'/updatepassword'}>Update Password</NavLink>
                 </li>
                  <li>
                  <button onClick={handleSignout}>SignOut</button>

@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import './login.css'
-import { addUser } from '../slice/userSlice';
+import { addUser } from '../../slice/userSlice';
 import {  Link, useNavigate } from 'react-router-dom';
 import { useRef, useState } from 'react';
 const Login=()=>{
@@ -29,6 +29,7 @@ const Login=()=>{
                   navigate('/dashborad')
             }
      catch(err){
+
             setErr(err.message)
                 
 
